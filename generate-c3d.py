@@ -15,7 +15,7 @@ __c3d_length__ = 4096     # fc6 length
 __c3d_root__ = os.path.expanduser("~")+"/C3D/examples/c3d_feature_extraction"
 __batch_size__ = 20       
 __force_computing__ = False
-__video_width__ = 800.0   # resize the video
+__video_width__ = 400.0   # resize the video
 
 def preprocessing(videos_list, gpu):
     with open(videos_list, "r") as f:
