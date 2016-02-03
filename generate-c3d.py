@@ -77,7 +77,7 @@ def call_c3d_script(total, gpu):
     with open("%s/prototxt/c3d_sport1m_feature_extractor_frm.prototxt" % __c3d_root__, "r") as f:
         lines = f.read().splitlines()
     update_lines = ['source: "%s"' % abs_input_path if "source" in line else line for line in lines]
-    update_lines = ['batch_size: %d' % __batch_size__ if "batch_size" in line else line for line in lines]
+    update_lines = ['batch_size: %d' % __batch_size__ if "batch_size" in line else line for line in update_lines]
     with open("%s/prototxt/feature_extractor_frm-%d.prototxt" % (__c3d_root__,gpu), "w") as f:
         for line in update_lines:
             f.write(line + "\n")
