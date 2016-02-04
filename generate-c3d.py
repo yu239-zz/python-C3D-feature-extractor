@@ -139,7 +139,7 @@ def process_c3d_features(videos_list):
 if __name__ == "__main__":
 
     if len(sys.argv) < 3:
-        print "usage: ./generate-c3d-input-list.py <videos-list> <gpu-id>"
+        print "usage: ./generate-c3d.py <videos-list> <gpu-id>"
         sys.exit()
         
     gpu = int(sys.argv[2])
