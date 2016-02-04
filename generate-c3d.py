@@ -114,6 +114,10 @@ def process_c3d_features(videos_list):
         print "collecting c3d features:", v
         video_dir = os.path.splitext(v)[0]
         video_name = os.path.split(video_dir)[1]
+        ## skip already computed
+        if (not __force_computing__) and os.path.isfile(video_dir+"/"+video_name+".c3d"):
+            continue
+
         fc6s = sorted(glob.glob("%s/*.fc6-1" % video_dir))
         feats_movie = []
         for fc6 in fc6s:
